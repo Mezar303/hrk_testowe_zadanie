@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+{% block okno %}
+    <h3 class="window-head">Dodawanie zawodnika</h3>
+    {{ form(form, {'attr' : {'action' : action}}) }}
+    <a href="{{ path("homepage") }}" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px">Powrót</a>
+{% endblock %}

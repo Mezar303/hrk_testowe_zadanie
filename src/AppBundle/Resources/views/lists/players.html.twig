@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block okno %}
+
+        <h3 class="window-head">Lista zawodników drużyny {{ team }}</h3>
+    <span class="pull-left"><a class="btn btn-primary" href="{{ path('homepage')}}"> Powrót</a></span>
+
+    <table class="table table-bordered" id="teams">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Wiek</th>
+            <th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for player in players %}
+            <tr>
+                <td>{{ player.id }}</td>
+                <td>{{ player.fname }}</td>
+                <td>{{ player.lname }}</td>
+                <td>{{ player.age }}</td>
+                <td><a href="{{ path('deletePlayer', {'teamId': team.id, 'playerId' : player.id}) }}" class="btn btn-danger">Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <script defer>
+        $(document).ready(function () {
+            $('#teams').DataTable({
+                ordering: false,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.10/i18n/Polish.json'
+                }
+
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,41 @@
+body {
+    background-color: #2EB8E6 !important;
+
+}
+#strona {
+
+    margin: 0 auto;
+}
+
+.window  {
+    background-color: white !important;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 15px #888888;
+}
+.window-head {
+    text-align: center;
+    background-color: gold;
+}
+
+.window-content form {
+    text-align: center;
+}
+.stopka {
+
+    background-color: rgba(255, 255, 255, 0.85 );
+    box-shadow: 0px 0px 15px #888888;
+    text-align: center;
+    border-radius: 30px;
+    font-family: times, Verdana, serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
+.dataTables_wrapper {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+.window > form {
+    width: 80%;
+}
